@@ -20,6 +20,11 @@ header > h2 {
     font-size: 20px;
 }
 
+header > h3 {
+    font-size: 16px;
+	color: White
+}
+
 header .button {
     display: inline-block;
     padding: 10px 10px;

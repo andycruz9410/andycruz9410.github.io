@@ -1,11 +1,11 @@
 //获取纵坐标
 function getY(i) {
-    return 20 + i * 120;
+    return 20 + i * 90;
 }
 
 //获取横坐标
 function getX(j) {
-    return 20 + j * 120;
+    return 20 + j * 90;
 }
 
 //获取数字格子的颜色

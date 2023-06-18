@@ -6,8 +6,8 @@ function showNumber(i, j, num) {
 
     //生成动画
     numberCell.animate({
-        width: "100px",
-        height: "100px",
+        width: "80px",
+        height: "80px",
         top: getY(i),
         left: getX(j)
     }, 50);

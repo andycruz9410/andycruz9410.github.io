@@ -325,8 +325,8 @@ function updateBoard() {
             } else {
                 //有数值则显示
                 theNumberCell.css({
-                    'width': '100px',
-                    'height': '100px',
+                    'width': '80px',
+                    'height': '80px',
                     'top': getY(i),
                     'left': getX(j),
                     'background-color': getBgColor(board[i][j]),
