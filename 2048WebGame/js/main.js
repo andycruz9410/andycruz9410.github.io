@@ -429,15 +429,23 @@ function currentDate() {
     return time;
 }
 
-var elementoTouch= document.getElementById("grid-container");
-//posteriormente asignamos el manejador de eventos lo cual
-// se hace de manera convencional.
-elementoTouch.addEventListener('touchstart', function(event){
-//Comprobamos si hay varios eventos del mismo tipo
-if (event.targetTouches.length == 1) { 
-var touch = event.targetTouches[0]; 
-// con esto solo se procesa UN evento touch
-alert(" se ha producido un touchstart en las siguientes cordenas: X " + touch.pageX + " en Y " + touch.pageY);
-}
+function mostrarDireccion(event) {
+      var x = event.touches[0].clientX;
+      var y = event.touches[0].clientY;
 
-}, false);
+      var direccion;
+
+      if (x < window.innerWidth / 3) {
+        direccion = "izquierda";
+      } else if (x > window.innerWidth * 2 / 3) {
+        direccion = "derecha";
+      } else if (y < window.innerHeight / 3) {
+        direccion = "arriba";
+      } else if (y > window.innerHeight * 2 / 3) {
+        direccion = "abajo";
+      }
+
+      if (direccion) {
+        alert("Has tocado la pantalla hacia " + direccion);
+      }
+    }
