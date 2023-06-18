@@ -436,17 +436,29 @@ function mostrarDireccion(event) {
     var tecla;
 
       if (x < window.innerWidth / 3) {
-        tecla = "ArrowLeft";
+
+			moveLeft()
+            setTimeout('createNumber()', 210);
+            setTimeout('isGameOver()', 300);
+          
       } else if (x > window.innerWidth * 2 / 3) {
-        tecla = "ArrowRight";
+        
+			moveRight()
+            setTimeout('createNumber()', 210);
+            setTimeout('isGameOver()', 300);
+		
+		
       } else if (y < window.innerHeight / 3) {
-        tecla = "ArrowUp";
+        
+			moveUp()
+            setTimeout('createNumber()', 210);
+            setTimeout('isGameOver()', 300);
+		
       } else if (y > window.innerHeight * 2 / 3) {
-        tecla = "ArrowDown";
+		  
+			moveDown()
+            setTimeout('createNumber()', 210);
+            setTimeout('isGameOver()', 300);
       }
 
-      if (tecla) {
-        var evento = new KeyboardEvent("keydown", {key: tecla});
-        document.dispatchEvent(evento);
-      }
     }
