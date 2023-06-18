@@ -433,19 +433,20 @@ function mostrarDireccion(event) {
       var x = event.touches[0].clientX;
       var y = event.touches[0].clientY;
 
-      var direccion;
+    var tecla;
 
       if (x < window.innerWidth / 3) {
-        direccion = "izquierda";
+        tecla = "ArrowLeft";
       } else if (x > window.innerWidth * 2 / 3) {
-        direccion = "derecha";
+        tecla = "ArrowRight";
       } else if (y < window.innerHeight / 3) {
-        direccion = "arriba";
+        tecla = "ArrowUp";
       } else if (y > window.innerHeight * 2 / 3) {
-        direccion = "abajo";
+        tecla = "ArrowDown";
       }
 
-      if (direccion) {
-        alert("Has tocado la pantalla hacia " + direccion);
+      if (tecla) {
+        var evento = new KeyboardEvent("keydown", {key: tecla});
+        document.dispatchEvent(evento);
       }
     }
