@@ -10,15 +10,16 @@ function newGame() {
         lose();
     }	//考虑玩家中途放弃的情况
     isOver = false;
-    init();
+	var name = document.getElementById("nombre").value;
+    init(name);
     createNumber();
     createNumber();	//在随机两个格子生成数字
 }
 
 /*初始化*/
-function init() {
+function init(name) {
     //输入玩家姓名
-    name = "Simon"/*prompt("Welcome to 2048!\nBefore starting a new game, please input your name:")*/;
+    /*name = prompt("Welcome to 2048!\nBefore starting a new game, please input your name:");*/
     updatePlayer(name);
 
     //画出并初始化棋盘
@@ -427,3 +428,26 @@ function currentDate() {
     time = year + "-" + month + "-" + date + " " + hour + ":" + min + ":" + sec;
     return time;
 }
+
+
+document.addEventListener("touchstart", function(event) {
+  var x = event.touches[0].clientX;
+  var y = event.touches[0].clientY;
+
+  var tecla;
+
+  if (x < window.innerWidth / 3) {
+    tecla = "ArrowLeft";
+  } else if (x > window.innerWidth * 2 / 3) {
+    tecla = "ArrowRight";
+  } else if (y < window.innerHeight / 3) {
+    tecla = "ArrowUp";
+  } else if (y > window.innerHeight * 2 / 3) {
+    tecla = "ArrowDown";
+  }
+
+  if (tecla) {
+    var evento = new KeyboardEvent("keydown", {key: tecla});
+    document.dispatchEvent(evento);
+  }
+});
