@@ -18,7 +18,7 @@ function newGame() {
 /*初始化*/
 function init() {
     //输入玩家姓名
-    name = prompt("Welcome to 2048!\nBefore starting a new game, please input your name:");
+    name = "Simon"/*prompt("Welcome to 2048!\nBefore starting a new game, please input your name:")*/;
     updatePlayer(name);
 
     //画出并初始化棋盘
