@@ -429,25 +429,15 @@ function currentDate() {
     return time;
 }
 
+var elementoTouch= document.getElementById("grid-container");
+//posteriormente asignamos el manejador de eventos lo cual
+// se hace de manera convencional.
+elementoTouch.addEventListener('touchstart', function(event){
+//Comprobamos si hay varios eventos del mismo tipo
+if (event.targetTouches.length == 1) { 
+var touch = event.targetTouches[0]; 
+// con esto solo se procesa UN evento touch
+alert(" se ha producido un touchstart en las siguientes cordenas: X " + touch.pageX + " en Y " + touch.pageY);
+}
 
-document.addEventListener("touchstart", function(event) {
-  var x = event.touches[0].clientX;
-  var y = event.touches[0].clientY;
-
-  var tecla;
-
-  if (x < window.innerWidth / 3) {
-    tecla = "ArrowLeft";
-  } else if (x > window.innerWidth * 2 / 3) {
-    tecla = "ArrowRight";
-  } else if (y < window.innerHeight / 3) {
-    tecla = "ArrowUp";
-  } else if (y > window.innerHeight * 2 / 3) {
-    tecla = "ArrowDown";
-  }
-
-  if (tecla) {
-    var evento = new KeyboardEvent("keydown", {key: tecla});
-    document.dispatchEvent(evento);
-  }
-});
+}, false);
