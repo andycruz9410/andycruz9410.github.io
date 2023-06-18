@@ -21,20 +21,20 @@
 </header>
 
 <div style="margin: 0 auto;width:1000px;">
-    <table id="list" border="1" frame="hsides" rules="rows" width="100%">
+    <table id="list" border="1" frame="hsides" rules="rows" width="350">
     </table>
 </div>
 
-<script>
-    let i, h = ['<tr><th>Rank<\/th><th>Player<\/th><th>Score<\/th><th>Result<\/th><th>Time<\/th><\/tr>'];
+<script> 
+    let i, h = ['<tr><th>Rank<\/th><th>Player<\/th><th>Score<\/th><th>Result<\/th><\/tr>'];
     for (i = 1; i <= 50; i++) {
-        h.push('<tr><th>' + i + '<\/th><th><\/th><th><\/th><th><\/th><th><\/th><\/tr>');
+        h.push('<tr><th>' + i + '<\/th><th><\/th><th><\/th><th><\/th><\/tr>');
     }
     document.getElementById("list").innerHTML = h.join(' ');
 </script>
 
 <footer>
-    <p>v2.0 Designed by Francis Grace Zhang</p>
+    <p>By SnacKode | Team</p>
 </footer>
 </body>
 </html>
