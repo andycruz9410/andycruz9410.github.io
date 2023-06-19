@@ -405,7 +405,7 @@ function displayHistory() {
 /*清除历史数据*/
 function clearHistory() {
     localStorage.clear();
-    alert("List cleared.");
+    // alert("List cleared.");
     location.reload();
 }
 
