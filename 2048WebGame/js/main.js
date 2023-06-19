@@ -163,14 +163,14 @@ function isGameOver() {
 
 /*失败*/
 function lose() {
-    alert("Game Over!\nYour score is " + score + "!");
+    // alert("Game Over!\nYour score is " + score + "!");
     updateHistory(false);
     window.location.reload();
 }
 
 /*获胜*/
 function win() {
-    alert("Congratulations!\nYour score is " + score + "!");
+    // alert("Congratulations!\nYour score is " + score + "!");
     updateHistory(true);
     window.location.reload();
 }
