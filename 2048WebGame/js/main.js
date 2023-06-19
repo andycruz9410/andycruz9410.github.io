@@ -10,7 +10,7 @@ function newGame() {
         lose();
     }	//考虑玩家中途放弃的情况
     isOver = false;
-	var name = document.getElementById("nombre").value;
+	name = document.getElementById("nombre").value;
     init(name);
     createNumber();
     createNumber();	//在随机两个格子生成数字
